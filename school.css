@@ -1,0 +1,97 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+:root {
+    --text-color: #f5f5f5;
+    --hover-color: #12f7ff;
+    --bg-color: #250821;
+    --secon-bg-color: #292e33;
+    --big-font: 2.5rem;
+    --norma-font: 2rem;
+    --neon-box-shadow: 0 0 .5rem #12f7ff;
+    --h2-font: 3rem;
+    --font-neon-text-shadow: 0 0 10px rgba(18, 247, 255, 0.3),
+        0 0 20px rgba(18, 247, 255, 0.3),
+        0 0 30px rgba(18, 247, 255, 0.3),
+        0 0 40px rgba(18, 247, 255, 0.3),
+        0 0 70px rgba(18, 247, 255, 0.3),
+        0 0 80px rgba(18, 247, 255, 0.3),
+        0 0 100px rgba(18, 247, 255, 0.3),
+        0 0 150px rgba(18, 247, 255, 0.3);
+}
+
+body {
+    font-family: "Poppsins", sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+.container {
+    max-width: 1440px;
+    margin: auto;
+}
+ 
+
+.left p {
+    width: 500px;
+    text-align: center;
+}
+
+.ntb {
+    margin-left: 150px;
+}
+.center{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.ntb {
+    margin-top: -200px;
+    margin-right: 99px;
+    width: 320px;
+    height: 45px;
+}
+
+.ntb a.btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    background: var(--hover-color);
+    color: var(--bg-color);
+    height: 100%;
+    font-style: 1rem;
+    letter-spacing: 1px;
+    font-weight: 600;
+    transition: .6s;
+    box-shadow: var(--neon-box-shadow);
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    border: 2px solid var(--hover-color);
+}
+
+a.btn:hover {
+    color: var(--hover-color);
+}
+
+a.btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: var(--bg-color);
+    width: 0;
+    height: 100%;
+    z-index: -1;
+    transition: .4s;
+}
+
+a.btn:hover::before {
+    width: 100%;
+}
